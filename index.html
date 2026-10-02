@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maker Suite</title>
+<meta name="description" content="Three browser-based sound tools for student filmmakers: ScapeMaker, ToneMaker and FXMaker." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0d1117; --panel: #101720; --border: #22303d; --text: #dce4ec;
+    --strong: #e6eef6; --muted: #8696a7; --accent: #5ee0c0; --accent-ink: #082019;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f5f7fa; --panel: #ffffff; --border: #d5dde6; --text: #243242;
+      --strong: #0f1b28; --muted: #566577; --accent: #0b7a64; --accent-ink: #ffffff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.55 "Space Grotesk", system-ui, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 56px 16px 40px; }
+  h1 { color: var(--strong); font-size: 2.2rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); max-width: 60ch; margin: 0 0 40px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 22px; display: flex; flex-direction: column; }
+  .card h2 { color: var(--strong); margin: 0 0 4px; font-size: 1.3rem; }
+  .tag { color: var(--accent); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 12px; }
+  .card p { margin: 0 0 12px; }
+  .start { color: var(--muted); font-size: .92rem; margin-top: auto !important; padding-top: 4px; }
+  .start b { color: var(--text); font-weight: 500; }
+  .links { display: flex; gap: 12px; align-items: center; margin-top: 14px; }
+  .btn { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600;
+    padding: 8px 16px; border-radius: 6px; }
+  .btn:hover, .btn:focus-visible { filter: brightness(1.1); }
+  .links a:not(.btn) { color: var(--muted); font-size: .9rem; }
+  .links a:not(.btn):hover { color: var(--accent); }
+  .general { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 24px; color: var(--muted); font-size: .95rem; }
+  .general h3 { color: var(--strong); font-size: 1rem; margin: 0 0 8px; }
+  .general ul { margin: 0; padding-left: 1.2em; }
+  footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Maker Suite</h1>
+  <p class="lede">Three free sound tools for student filmmakers. They run entirely in your browser: no accounts, no installs, nothing uploaded.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>ScapeMaker</h2>
+      <p class="tag">Soundscapes</p>
+      <p>A multi-track timeline for building a film's soundscape from your own recordings and freely licensed sounds, with licensing checked as you go.</p>
+      <p class="start"><b>Getting started:</b> drop in your own recordings, or search the Internet Archive and the radio aporee map. A Freesound search is optional and needs your own free API key. Exports a single zip with the mix, stems and a sources list.</p>
+      <div class="links">
+        <a class="btn" href="https://quixbrics.github.io/Scapemaker/">Open</a>
+        <a href="https://github.com/quixbrics/Scapemaker">Source</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>ToneMaker</h2>
+      <p class="tag">Emotional ambience</p>
+      <p>Generates a pad, a drone and an optional quiet melody, steered by where you place each one on a map of emotion. A clarity meter shows whether your tracks agree or clash.</p>
+      <p class="start"><b>Getting started:</b> pick one of the preset scenes, then drag the tracks around the emotion map and listen to what changes. Save your own scenes, and export 24-bit WAV, with stems if you want them.</p>
+      <div class="links">
+        <a class="btn" href="https://quixbrics.github.io/ToneMaker/">Open</a>
+        <a href="https://github.com/quixbrics/ToneMaker">Source</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>FXMaker</h2>
+      <p class="tag">Extreme effects</p>
+      <p>Stretch sounds up to 10,000x, re-pitch and reverse them, and push them through chains of 33 effects. A built-in safety limiter keeps the output from clipping.</p>
+      <p class="start"><b>Getting started:</b> load up to four sounds and start with a recipe. Save your work as a <b>.fxmaker</b> project that carries its audio with it. MIDI control works in Chrome or Edge.</p>
+      <div class="links">
+        <a class="btn" href="https://quixbrics.github.io/FXMaker/">Open</a>
+        <a href="https://github.com/quixbrics/FXMaker">Source</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="general">
+    <h3>Good to know</h3>
+    <ul>
+      <li>Use a desktop browser, preferably Chrome, and wear headphones for the best results.</li>
+      <li>Your settings and presets are stored in your browser only. Save project files to keep your work.</li>
+      <li>All three share the same look and a light/dark theme, which carries across the apps.</li>
+    </ul>
+  </div>
+  <footer>Built by <a href="https://github.com/quixbrics" style="color:inherit">quixbrics</a>.</footer>
+</main>
+</body>
+</html>
